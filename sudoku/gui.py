@@ -13,13 +13,13 @@ C = CORNER = 3  # 每个单位是4
 
 
 class SudokuGUI(RumClient):
-    def init(self, name=None, group_id=None):
+    def init(self, name=None):
         self.name = name or USERNAME
         self.is_post_to_rum = True  # 是否发布到 rum
         self.running = True  # 是否继续游戏
         self.blank_number = 25  # 难度 # int(sys.argv[1])
         self.cur_blank_number = self.blank_number
-        self.group_id = group_id or GROUP_ID
+        self.group_id = GROUP_ID
 
     def loop(self):
         # init pygame
@@ -92,7 +92,7 @@ class SudokuGUI(RumClient):
         )
         if self.is_post_to_rum:
             # post result to rum
-            self.group.send_note(group_id=self.group_id, content=note)
+            self.group.send_note(content=note)
 
         pygame.quit()
 

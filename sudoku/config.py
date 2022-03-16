@@ -1,2 +1,2 @@
-GROUP_ID = "cea9bc4b-aa1e-4fbc-a004-f663bd9398d1"  # test group
+GROUP_ID = "938455b8-9683-4d06-abae-b422c89103b6"  # test group
 USERNAME = "juanjuan_test"
