@@ -3,7 +3,6 @@ import time
 import pygame
 from pygame.color import THECOLORS as COLORS
 from backend import print_matrix, give_me_a_game, check
-from rumpyconfig import RumpyConfig
 from rumpy import RumClient
 from config import *
 
@@ -160,6 +159,6 @@ class SudokuGUI(RumClient):
 
 
 if __name__ == "__main__":
-    game = SudokuGUI(**RumpyConfig.GUI)
+    game = SudokuGUI()
     game.init()
     game.loop()
